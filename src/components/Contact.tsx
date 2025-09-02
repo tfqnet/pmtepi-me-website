@@ -45,11 +45,11 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
               <div className="space-y-6">
                 {[
-                  { icon: "📧", title: "Email", desc: "Quick response guaranteed", action: "tfqnet@gmail.com" },
-                  { icon: "📞", title: "Phone", desc: "Free consultation call", action: "+1 (555) 123-4567" },
-                  { icon: "💬", title: "Chat", desc: "Live support available", action: "Start conversation" },
+                  { icon: "📧", title: "Email", desc: "Quick response guaranteed", action: "tfqnet@gmail.com", link: "mailto:tfqnet@gmail.com" },
+                  { icon: "📞", title: "Phone", desc: "Free consultation call", action: "+60 19-216 6699", link: "tel:+60192166699" },
+                  { icon: "💬", title: "WhatsApp", desc: "Chat with me instantly", action: "Message on WhatsApp", link: "https://wa.me/60192166699?text=Hi,%20I'm%20interested%20in%20your%20digital%20solutions%20services" },
                 ].map((contact, index) => (
-                  <div key={index} className="flex items-center space-x-4 group cursor-pointer">
+                  <a key={index} href={contact.link} className="flex items-center space-x-4 group cursor-pointer hover:bg-white/5 p-3 rounded-xl transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
                       {contact.icon}
                     </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                       <div className="text-gray-400 text-sm">{contact.desc}</div>
                       <div className="text-cyan-400 text-sm font-medium">{contact.action}</div>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -101,8 +101,11 @@ export default function Contact() {
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                 </a>
                 
-                <button className="w-full py-4 px-8 border-2 border-white/30 rounded-xl text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
-                  📅 Schedule a Call
+                <button 
+                  onClick={() => window.open('https://wa.me/60192166699?text=Hi,%20I%27d%20like%20to%20schedule%20a%20consultation%20call', '_blank')}
+                  className="w-full py-4 px-8 border-2 border-white/30 rounded-xl text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                >
+                  � WhatsApp Chat
                 </button>
               </div>
             </div>

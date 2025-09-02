@@ -36,21 +36,25 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-white">Connect</h4>
             <div className="flex space-x-4 mb-4">
               {[
-                { icon: "💼", label: "LinkedIn" },
-                { icon: "🐙", label: "GitHub" },
-                { icon: "📧", label: "Email" },
-                { icon: "📱", label: "WhatsApp" }
+                { icon: "💼", label: "LinkedIn", link: "#" },
+                { icon: "🐙", label: "GitHub", link: "https://github.com/tfqnet" },
+                { icon: "📧", label: "Email", link: "mailto:tfqnet@gmail.com" },
+                { icon: "�", label: "WhatsApp", link: "https://wa.me/60192166699?text=Hi,%20I'm%20interested%20in%20your%20services" }
               ].map((social, index) => (
-                <div
+                <a
                   key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 cursor-pointer transform hover:scale-110"
                 >
                   <span className="text-sm">{social.icon}</span>
-                </div>
+                </a>
               ))}
             </div>
             <div className="text-gray-400 text-sm">
               <p>📧 tfqnet@gmail.com</p>
+              <p>📞 +60 19-216 6699</p>
               <p>🌐 pmtepi.me</p>
             </div>
           </div>
