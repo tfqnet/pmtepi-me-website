@@ -28,12 +28,12 @@ export default function Contact() {
         {/* Section header */}
         <div className="mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your ideas into powerful digital solutions? 
-            Let's discuss your project and bring your vision to life.
+            Let&apos;s discuss your project and bring your vision to life.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-white mb-6">Ready to Start?</h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
                 Whether you need a complete digital transformation or just want to discuss your ideas, 
-                I'm here to help you succeed.
+                I&apos;m here to help you succeed.
               </p>
               
               <div className="space-y-4">

@@ -26,7 +26,7 @@ export default function About() {
                 specializing in solution architecture, mobile & web development, and cloud solutions.
               </p>
               <p className="text-lg leading-relaxed text-gray-700">
-                I've worked on <span className="font-bold text-indigo-600">enterprise systems</span>, 
+                I&apos;ve worked on <span className="font-bold text-indigo-600">enterprise systems</span>, 
                 mobile apps, IoT integrations, and digital transformation projects that have 
                 <span className="font-bold text-cyan-600"> transformed businesses</span> worldwide.
               </p>
