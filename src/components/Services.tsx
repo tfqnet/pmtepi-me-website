@@ -1,115 +1,46 @@
 const services = [
   {
-    title: "Solution Architecture",
-    description: "Designing scalable and secure systems for enterprise use.",
-    icon: "🏗️",
-    features: ["Microservices Design", "Scalable Infrastructure", "Security First", "Performance Optimization"],
-    gradient: "from-blue-600 to-cyan-600"
+    num: "i",
+    title: "Technical Project Management",
+    desc: "End-to-end delivery of IT initiatives — from requirements and stakeholder alignment through UAT, training, and go-live. Built on 12+ years managing enterprise-scale projects at a Fortune-ranked MNC.",
+    tags: ["Agile / Scrum", "Stakeholder Mgmt", "UAT & Training", "Risk Management"],
   },
   {
-    title: "Mobile & Web Development",
-    description: "Building apps with Flutter, React Native, and modern frameworks.",
-    icon: "📱",
-    features: ["Cross-Platform Apps", "Responsive Design", "Modern Frameworks", "User Experience"],
-    gradient: "from-purple-600 to-pink-600"
+    num: "ii",
+    title: "Solution Architecture & System Design",
+    desc: "Designing scalable, secure systems for enterprise contexts. Mobile, web, cloud, and IoT integrations — grounded in real delivery experience, not just theory.",
+    tags: ["Azure Cloud", "Firebase", "Mobile & Web", "IoT Integration"],
   },
   {
-    title: "Cloud Solutions",
-    description: "Microsoft Azure, Firebase, and enterprise integrations.",
-    icon: "☁️",
-    features: ["Azure Cloud", "Firebase Integration", "DevOps Pipeline", "Auto Scaling"],
-    gradient: "from-green-600 to-teal-600"
+    num: "iii",
+    title: "AI-Powered Solutions",
+    desc: "Integrating AI into existing workflows and products — agentic systems, LLM-powered tools, and practical automation. Prototype-to-production, with a focus on what actually ships.",
+    tags: ["Agentic AI", "LLM Integration", "Process Automation", "Rapid Prototyping"],
   },
-  {
-    title: "IT Consultation",
-    description: "Helping businesses adopt the right technologies.",
-    icon: "💡",
-    features: ["Technology Strategy", "Digital Transformation", "Cost Optimization", "Team Training"],
-    gradient: "from-orange-600 to-red-600"
-  }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-white relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full translate-y-1/2 -translate-x-1/2 opacity-50"></div>
-      </div>
+    <section id="services" className="border-y border-rule bg-white py-24 md:py-32">
+      <div className="section-shell">
+        <span className="mb-6 block text-xs font-semibold uppercase tracking-widest text-gold">Services</span>
+        <h2 className="font-display text-3xl font-medium leading-tight text-ink md:text-5xl">Three things I do well.</h2>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
-            Services
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transforming ideas into powerful digital solutions with cutting-edge technology and innovative approaches
-          </p>
-        </div>
-
-        {/* Services grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
-            >
-              {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-              
-              {/* Content */}
-              <div className="relative z-10">
-                {/* Icon and title */}
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-2xl shadow-lg mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                    {service.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <div className="grid grid-cols-2 gap-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="flex items-center text-sm text-gray-700 group-hover:text-gray-900 transition-colors duration-300"
-                    >
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} mr-3 opacity-70 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Hover effect arrow */}
-                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                  <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white text-sm`}>
-                    →
-                  </div>
-                </div>
+        <div className="mt-12 grid border-l border-t border-rule lg:grid-cols-3">
+          {services.map((service) => (
+            <article key={service.num} className="flex flex-col border-b border-r border-rule p-7 md:p-9">
+              <span className="font-display text-xs italic text-gold">{service.num}</span>
+              <h3 className="mt-5 font-display text-xl font-medium leading-snug text-ink">{service.title}</h3>
+              <p className="mt-4 flex-1 text-sm font-light leading-relaxed text-mid">{service.desc}</p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <span key={tag} className="border border-gold-lt px-2 py-0.5 text-[0.65rem] uppercase tracking-wide text-gold">
+                    {tag}
+                  </span>
+                ))}
               </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
-            </div>
+            </article>
           ))}
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full text-white font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <span className="relative z-10">Discuss Your Project</span>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-          </button>
         </div>
       </div>
     </section>
